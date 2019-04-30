@@ -28,4 +28,5 @@ def add_atividade(request):
         status=200
     )
 
-
+def remove_atividade(request):
+    pass
