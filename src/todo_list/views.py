@@ -2,6 +2,7 @@ import json
 
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 from .models import TodoList
 
 
@@ -13,6 +14,7 @@ def index(request):
 
     return render(request, 'todo_list/index.html', context)
 
+@csrf_exempt
 def add_atividade(request):
     descricao_atividade = request.POST['atividade']
     atividade = TodoList(descricao=descricao_atividade)
