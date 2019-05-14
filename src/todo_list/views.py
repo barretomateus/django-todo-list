@@ -14,6 +14,7 @@ def index(request):
 
     return render(request, 'todo_list/index.html', context)
 
+
 @csrf_exempt
 def add_atividade(request):
     descricao_atividade = request.POST['atividade']
@@ -30,5 +31,7 @@ def add_atividade(request):
         status=200
     )
 
+
+@csrf_exempt
 def remove_atividade(request):
     pass
